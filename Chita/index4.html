@@ -1,1 +1,77 @@
-4.Четвертое задание для взрослого квеста
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Задание 4</title>
+<h2 class="philosopher-regular">
+У Лены - как профессионала очень много необычных предметов.  <br>
+Подбери названия к картинкам <br>
+Запиши соответствия <br>
+</h2>
+
+<style>
+    /* Стили для размещения элементов */
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+    }
+    .form {
+        display: flex;
+        align-items: center;
+        width: 70%;
+    }
+    .form img {
+        width: 700px; /* Ширина изображения */
+        height: auto;
+        margin-right: 20px;
+    }
+    .form input {
+        width: 100%; /* Растягиваем поля ввода на всю доступную ширину */
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form">
+        <img src="test.png" alt="Изображение">
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <input type="text" name="field1" placeholder="Палаццо">
+            <input type="text" name="field2" placeholder="Лонгслив">
+            <input type="text" name="field3" placeholder="Честерфильд">	
+            <input type="text" name="field4" placeholder="Плиссе">
+            <input type="text" name="field5" placeholder="Чиносы">
+            <input type="text" name="field6" placeholder="Свитшот">	
+			<input type="text" name="field7" placeholder="Бомбер">
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function validateForm() {
+        var expectedValues = ['4', '3', '1', '7', '5', '6', '2'];
+        var inputs = document.getElementsByTagName("input");
+        var fieldValueArray = [];
+        for (var i = 0; i < inputs.length; i++) {
+            fieldValueArray.push(inputs[i].value.trim());
+        }
+        if (JSON.stringify(fieldValueArray) === JSON.stringify(expectedValues)) {
+            // Если значения введены правильно, перенаправляем на другую страницу
+            window.location.href = "index5.html";
+            return false; // Отменяем отправку формы
+        } else {
+            // Если значения введены неправильно, выводим сообщение
+            alert("Подумайте ещё раз");
+            return false; // Отменяем отправку формы
+        }
+    }
+</script>
+
+</body>
+</html>
