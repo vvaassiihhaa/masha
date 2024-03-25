@@ -1,13 +1,16 @@
-<!DOCTYPE html>
+
+<title>ЗАДАНИЕ 8 Кто поет?</title>
+
+ <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ЗАДАНИЕ 1</title>
+<title>Проверка ввода</title>
 <style>
   /* Добавляем стиль для изменения фона страницы */
   body {
-    background-color: #25A95B;
+    background-color: #55D52B;
   }
 
   @font-face {
@@ -24,16 +27,13 @@
   }
 </style>
 </head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ЗАДАНИЕ 2</title>
 <body>
-  <h1 class="philosopher-regular">Соберите изображение героя и введите его имя  <br><br>
+  <h1 class="philosopher-regular">1. Угадай исполнителя  <br><br>
   
-<p style = "font-size: 34px"> 
-
-<a href = "pp1.pptx">Скачайте и соберите пазл</a> <br><br>
-
+  <!-- Замените ссылку на картинку boy.jpeg на вашу ссылку -->
+<iframe width="560" height="315" src="https://www.youtube.be/6qN5idnVLog" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+Кто поет ? </h1>
 
   <form id="myForm" onsubmit="event.preventDefault(); checkInput()">
     <label for="textInput" class="philosopher-regular">Введите текст:</label>
@@ -47,21 +47,17 @@
     function checkInput() {
       var inputText = document.getElementById('textInput').value;
 
-      if (inputText.toLowerCase() === 'лена') {
-        document.getElementById('message').innerHTML = '<p style = "font-size: 34px"> Давайте поздравим нашу именинницу с днём рождения!</p>';
+      if (inputText.toLowerCase() === 'Ляпис') {
+        document.getElementById('message').innerHTML = 'Правильно ! Молодцы !!!';
         // Создаем ссылку на другой HTML файл
         var link = document.createElement('a');
-        link.href = 'example2.html';
-        link.textContent = 'Перейти к следующему заданию';
+        link.href = 'example7.html';
+        link.textContent = 'Перейти к другому файлу ';
         document.body.appendChild(link);
       } else {
-        document.getElementById('message').innerHTML = 'Попробуйте ещё раз ( 4 буквы )';
+        document.getElementById('message').innerHTML = 'Попробуй снова!';
       }
     }
-  </h1>
-  
- </script>
-  </body>
-  </html>
-
-
+  </script>
+</body>
+</html>

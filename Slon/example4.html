@@ -1,0 +1,56 @@
+
+<title>ЗАДАНИЕ 5</title>
+
+
+
+
+<h1 class="philosopher-regular">
+Помогите расстроенному хозяину, потерявшего своего питомца в большой комнате
+<br>
+ <br>
+Запиши названия <br>
+
+</h1>
+
+
+</head>
+<body>
+
+
+<div class="container">
+    <div class="form">
+        <img src="3v1.png" alt="Изображение">
+<form action="#" method="post" onsubmit="return validateForm()">
+            <input type="text" name="field1" placeholder="Песня 1">
+            <input type="text" name="field2" placeholder="Песня 2">
+            <input type="text" name="field3" placeholder="Песня 3">	
+            
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+  
+  <p id="message" class="philosopher-regular"></p>
+  
+  <script>
+    function validateForm() {
+        var expectedValues = ['выйду ночью в поле с конем', 'ой цветет калина в поле у ручья', 'изгиб гитары желтой ты обнимаешь нежно'];
+        var inputs = document.getElementsByTagName("input");
+        var fieldValueArray = [];
+        for (var i = 0; i < inputs.length; i++) {
+            fieldValueArray.push(inputs[i].value.trim());
+        }
+        if (JSON.stringify(fieldValueArray) === JSON.stringify(expectedValues)) {
+            // Если значения введены правильно, перенаправляем на другую страницу
+            window.location.href = "index6.html";
+            return false; // Отменяем отправку формы
+        } else {
+            // Если значения введены неправильно, выводим сообщение
+            alert("Подумайте ещё раз");
+            return false; // Отменяем отправку формы
+        }
+    }
+  </script> 
+  
+  </body>
+  </html>

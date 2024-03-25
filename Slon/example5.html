@@ -1,0 +1,49 @@
+
+<title>ЗАДАНИЕ 6</title>
+
+ <head>
+
+<body>
+
+
+<h1 class="philosopher-regular">
+Помогите расстроенному хозяину,
+<br>
+потерявшего своего питомца <br>
+
+в большой комнате<br>
+</h1>
+
+</head>
+
+<img src="Dg.png" alt="Картинка"> <br><br>
+
+
+
+  <form id="myForm" onsubmit="event.preventDefault(); checkInput()">
+    <label for="textInput" class="philosopher-regular">Кто прячется:</label>
+    <input type="text" id="textInput" name="textInput" class="philosopher-regular">
+    <button type="submit" class="philosopher-regular">Отправить</button>
+  </form>
+  
+  <p id="message" class="philosopher-regular"></p>
+  
+  <script>
+    function checkInput() {
+      var inputText = document.getElementById('textInput').value;
+
+      if (inputText.toLowerCase() === 'собака') {
+        document.getElementById('message').innerHTML = 'Продолжим!';
+        // Создаем ссылку на другой HTML файл
+        var link = document.createElement('a');
+        link.href = 'example6.html';
+        link.textContent = 'Перейти к следующему заданию';
+        document.body.appendChild(link);
+      } else {
+        document.getElementById('message').innerHTML = 'не угадали';
+      }
+    }
+  </script>  
+  
+</body>
+</html>  
