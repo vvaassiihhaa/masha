@@ -1,0 +1,38 @@
+<title>Задание 5 ( 3 )</title>
+
+<h2 class="philosopher-regular">
+Блиц. Угадай песню<br>
+</h2>
+
+<img src="531.jpg" alt="Картинка" style="width: 18%">
+<img src="532.jpg" alt="Картинка" style="width: 30%"> 
+<img src="533.png" alt="Картинка" style="width: 20%"><br>
+<img src="534.png" alt="Картинка" style="width: 20%">
+<img src="535.jpg" alt="Картинка" style="width: 20%">
+
+<br><br>
+
+  <form id="myForm" onsubmit="event.preventDefault(); checkInput()">
+    <label for="textInput" class="philosopher-regular">Введите первую строчку песни:</label>
+    <input type="text" id="textInput" name="textInput" class="philosopher-regular">
+    <button type="submit" class="philosopher-regular">Отправить</button>
+  </form>
+  
+  <p id="message" class="philosopher-regular"></p>
+  
+  <script>
+    function checkInput() {
+      var inputText = document.getElementById('textInput').value;
+
+      if (inputText.toLowerCase() === 'изгиб гитары жёлтой ты обнимаешь нежно') {
+        document.getElementById('message').innerHTML = 'Верно !!!';
+        // Создаем ссылку на другой HTML файл
+        var link = document.createElement('a');
+        link.href = 'index54.html';
+        link.textContent = 'ЧТО ещё ЕСТЬ ???';
+        document.body.appendChild(link);
+      } else {
+        document.getElementById('message').innerHTML = 'Попробуйте ещё раз';
+      }
+    }
+  </script>  
