@@ -1,1 +1,32 @@
 <title>Задание 8</title>
+
+<h1 class="philosopher-regular">Кто поёт?</h1> <br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2Q2bbNCHugI?si=u9wTNWtxWO3dwaxO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <form id="myForm" onsubmit="event.preventDefault(); checkInput()">
+    <label for="textInput" class="philosopher-regular">Введите текст:</label>
+    <input type="text" id="textInput" name="textInput" class="philosopher-regular">
+    <button type="submit" class="philosopher-regular">Отправить</button>
+  </form>
+
+  <p id="message" class="philosopher-regular"></p>
+
+<br>
+
+  <script>
+    function checkInput() {
+      var inputText = document.getElementById('textInput').value;
+
+      if (inputText.toLowerCase() === 'ляпис') {
+        document.getElementById('message').innerHTML = 'Правильно ! Молодцы !!!';
+        // Создаем ссылку на другой HTML файл
+        var link = document.createElement('a');
+        link.href = 'index9.html';
+        link.textContent = 'Что же ещё там Маша придумала ?';
+        document.body.appendChild(link);
+      } else {
+        document.getElementById('message').innerHTML = 'Попробуй ещё раз';
+      }
+    }
+  </script>
