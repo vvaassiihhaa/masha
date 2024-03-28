@@ -1,1 +1,60 @@
-задание для взрослого квеста
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Задание 7</title>
+<style>
+  /* Добавляем стиль для изменения фона страницы */
+  body {
+    background-color: #55D52B;
+  }
+
+  @font-face {
+    font-family: 'Philosopher';
+    src: url('Philosopher-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .philosopher-regular {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>
+</head>
+<body>
+  <h1 class="philosopher-regular">1. Пусть ответит Саша  <br><br>
+  
+  <!-- Замените ссылку на картинку boy.jpeg на вашу ссылку -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zXN6z-97PfM?si=YQUSdqn7g0Bl4Kg3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+Что ответил Малыш ? </h1>
+
+  <form id="myForm" onsubmit="event.preventDefault(); checkInput()">
+    <label for="textInput" class="philosopher-regular">Введите текст:</label>
+    <input type="text" id="textInput" name="textInput" class="philosopher-regular">
+    <button type="submit" class="philosopher-regular">Отправить</button>
+  </form>
+
+  <p id="message" class="philosopher-regular"></p>
+
+  <script>
+    function checkInput() {
+      var inputText = document.getElementById('textInput').value;
+
+      if (inputText.toLowerCase() === 'в левом') {
+        document.getElementById('message').innerHTML = 'Правильно ! Молодцы !!!';
+        // Создаем ссылку на другой HTML файл
+        var link = document.createElement('a');
+        link.href = 'index8.html';
+        link.textContent = 'Перейти к другому файлу ( Угадай кто поёт )';
+        document.body.appendChild(link);
+      } else {
+        document.getElementById('message').innerHTML = 'Попробуй ещё раз или возьми подсказку';
+      }
+    }
+  </script>
+</body>
+</html>
