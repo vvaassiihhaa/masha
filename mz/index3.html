@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Задание 4</title>
+<h2 class="philosopher-regular">
+
+</h2>
+
+<style>
+
+  body {
+    background-color: #E1FFFF;
+  }
+
+
+    /* Стили для размещения элементов */
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+    }
+    .form {
+        display: flex;
+        align-items: center;
+        width: 70%;
+    }
+    .form img {
+        width: 700px; /* Ширина изображения */
+        height: auto;
+        margin-right: 20px;
+    }
+    .form input {
+        width: 100%; /* Растягиваем поля ввода на всю доступную ширину */
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form">
+        <img src="test.png" alt="Изображение">
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <input type="text" name="field1" placeholder="Что такое любовь?">
+            <input type="text" name="field2" placeholder="Есть ли что-нибудь вечное?">
+            <input type="text" name="field3" placeholder="Можно ли знать всё на свете?">	
+            <input type="text" name="field4" placeholder="Как всё сделать вовремя?">
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function validateForm() {
+        var expectedValues = ['3', '1', '4', '2'];
+        var inputs = document.getElementsByTagName("input");
+        var fieldValueArray = [];
+        for (var i = 0; i < inputs.length; i++) {
+            fieldValueArray.push(inputs[i].value.trim());
+        }
+        if (JSON.stringify(fieldValueArray) === JSON.stringify(expectedValues)) {
+            // Если значения введены правильно, перенаправляем на другую страницу
+            window.location.href = "index5.html";
+            return false; // Отменяем отправку формы
+        } else {
+            // Если значения введены неправильно, выводим сообщение
+            window.location.href = "index4.html";            
+            return false; // Отменяем отправку формы
+        }
+    }
+</script>
+
+</body>
+</html>
