@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .falling-word {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: fall 5s infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -50px;
+            }
+            100% {
+                top: 100vh;
+            }
+        }
+
+        #input-container {
+            margin-top: 50px;
+        }
+
+        input {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fade-in" id="number-container">
+        <h1>2.1 Прочти цифру</h1>
+    </div>
+
+    <div class="falling-word" style="animation-delay: 1s;">На</div>
+    <div class="falling-word" style="animation-delay: 2s;">стаканах</div>
+    <div class="falling-word" style="animation-delay: 3s;">указано</div>
+    <div class="falling-word" style="animation-delay: 4s;">слово</div>
+
+    <div id="input-container">
+        <input type="text" id="input-number" placeholder="Введите цифру">
+    </div>
+
+    <script>
+        document.getElementById('input-number').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const inputValue = event.target.value;
+                if (inputValue == '8') {
+                    window.location.href = 'index8.html';
+                } else {
+                    alert('Почти угадал !');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

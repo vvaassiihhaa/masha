@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2.2</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .blinking-text {
+            text-align: center;
+            font-size: 1.5em;
+            animation: blink 1s step-start infinite;
+        }
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            transform: scale(1.5);
+        }
+
+        #input-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        input {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            width: 50%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>2.2 Почтовый индекс</h1>
+    <p class="blinking-text">Соедините точки согласно схемы на картинке</p>
+    <div class="image-container">
+        <img src="8.png" alt="Схема">
+    </div>
+
+    <div class="image-container">
+        <img src="88.png" alt="Схема">
+    </div>
+
+    <div id="input-container">
+        <input type="text" id="input-number" placeholder="Введите цифру">
+    </div>
+
+    <script>
+        document.getElementById('input-number').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const inputValue = event.target.value;
+                if (inputValue == '9') {
+                    window.location.href = 'index9.html';
+                } else {
+                    alert('Нет. Не сдавайся !');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
