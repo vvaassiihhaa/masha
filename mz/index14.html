@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>2.7. Балет</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 24px;
+        }
+        li {
+            margin: 10px 0;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 18px;
+            margin: 20px 0;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value;
+            if (answer === '3') {
+                window.location.href = 'index15.html';
+            } else {
+                alert('Неверный ответ. Попробуй снова.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Из перечисленных произведений выберите<br>балеты П.И. Чайковского</h1>
+    <ul>
+        <li>Лебединое озеро</li>
+        <li>Баядерка</li>
+        <li>Спящая красавица</li>
+        <li>Жизель</li>
+        <li>Дон Кихот</li>
+        <li>Щелкунчик</li>
+    </ul>
+    <input type="text" id="answer" placeholder="Введите количество">
+    <button onclick="checkAnswer()">Отправить</button>
+</body>
+</html>

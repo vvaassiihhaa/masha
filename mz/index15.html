@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.8 Сколько</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            font-size: 1.5em;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Сколько у Москвы холмов?<br>
+Сколько чудес света?<br>
+Сколько цветов радуги?<br>
+</h1>
+    <form id="riddleForm">
+        <input type="text" id="answer" placeholder="Твой ответ" required>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script>
+        document.getElementById('riddleForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const answer = document.getElementById('answer').value.trim();
+            if (answer === '7') {
+                window.location.href = 'index16.html';
+            } else {
+                alert('Неверный ответ. Попробуй еще раз.');
+            }
+        });
+    </script>
+</body>
+</html>
