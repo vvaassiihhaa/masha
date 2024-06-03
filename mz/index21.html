@@ -1,31 +1,29 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2.9 Какая цифра пропущена?</title>
+    <title>Бутерброд</title>
 </head>
 <body>
-    <h1>2.9 Какая цифра пропущена?</h1>
+    <h1>Бутерброд</h1>
+    <p>Разгадайте слово</p>
 
-    <img src="2.9.jpg">
+    <!-- Задаем размер изображения -->
+    <img src="13forRebus.jpg" style="width: 40%; height: 40%;">
 
     <form id="numberForm">
-        <input type="text" id="numberInput" name="number" placeholder="Введите цифру">
+        <input type="text" id="numberInput" name="number" placeholder="Разгадайте слово">
         <button type="submit">Отправить</button>
     </form>
     <script>
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === '3') {
-                window.location.href = 'index17.html';
+            if (number === 'холодильник') {
+                window.location.href = 'index22.html';
             } else {
-                alert('Неверная цифра. Попробуйте еще раз.');
+                alert( 'Первая буква - х' );
             }
         });
     </script>

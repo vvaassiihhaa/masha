@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>2.7 Балет</title>
+    <title>2.11 Глаз</title>
     <style>
         body {
             display: flex;
@@ -52,8 +52,8 @@
     <script>
         function checkAnswer() {
             const answer = document.getElementById('answer').value;
-            if (answer === '3') {
-                window.location.href = 'index15.html';
+            if (answer === '2') {
+                window.location.href = 'index19.html';
             } else {
                 alert('Неверный ответ. Попробуй снова.');
             }
@@ -61,16 +61,17 @@
     </script>
 </head>
 <body>
-    <h1>Из перечисленных произведений выберите<br>балеты П.И. Чайковского</h1>
+    <h1>Какой врач диагностирует и лечит<br>
+        органы зрения ?</h1>
     <ul>
-        <li>Лебединое озеро</li>
-        <li>Баядерка</li>
-        <li>Спящая красавица</li>
-        <li>Жизель</li>
-        <li>Дон Кихот</li>
-        <li>Щелкунчик</li>
+        <li>1. Оториноларинголог</li>
+        <li>2. Офтальмолог</li>
+        <li>3. Анестезиолог</li>
+        <li>4. Эндокринолог</li>
+        <li>5. Ортопед</li>
+
     </ul>
-    <input type="text" id="answer" placeholder="Введите количество">
+    <input type="text" id="answer" placeholder="Введите номер">
     <button onclick="checkAnswer()">Отправить</button>
 </body>
 </html>
