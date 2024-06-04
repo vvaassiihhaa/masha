@@ -3,3 +3,32 @@
 <a href = "pp.pptx">Собери пазл</a> <br><br>
 
 </p>
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семинар №9</title>
+</head>
+<body>
+    <h1>Семинар №9 Музыка</h1>
+    <h2>Введите 4-ю букву</h2>
+    <form id="numberForm">
+        <input type="text" id="numberInput" name="number" placeholder="Введите 4-ю букву">
+        <button type="submit">Отправить</button>
+    </form>
+    <script>
+        document.getElementById('numberForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const number = document.getElementById('numberInput').value;
+            if (number === 'т') {
+                window.location.href = 'index39.html';
+            } else {
+                alert('Неверная букву. Попробуйте еще раз.');
+            }
+        });
+    </script>
+</body>
+</html>

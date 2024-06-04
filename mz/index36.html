@@ -7,7 +7,11 @@
 </head>
 <body>
     <h1>Пара №8 Тайны загадок</h1>
-    <h2>3. Он слово или часть его. Он есть у зуба и у ели. <br><br>Нет у добра его, но говорят, у зла бывает</h2>
+    <h2>4. Какой же от неё быть может толк, <br> 
+          когда она – известный всем порок.<br>
+          Однако, не сдвигаясь с места, <br>
+          она и матушка, и двигатель прогресса
+</h2>
     <form id="numberForm">
         <input type="text" id="numberInput" name="number" placeholder="Введите ответ">
         <button type="submit">Отправить</button>
@@ -16,15 +20,14 @@
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'корень') {
-                window.location.href = 'index36.html';
+            if (number === 'лень') {
+                window.location.href = 'index37.html';
             } else {
                 alert('Нет. Попробуйте еще раз.');
             }
         });
     </script>
     <br><br>
-    <p>П О Д С К А З К А</p>
-    <img src="qr-code.gif">
+    <img src="p36.png">
 </body>
 </html>
