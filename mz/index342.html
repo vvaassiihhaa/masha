@@ -3,25 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Коллоквиум №5</title>
+    <title>Пара №8 Тайны загадок</title>
 </head>
 <body>
-    <h1>Коллоквиум №5</h1>
-    <h2>Из стекла или фарфора,</h2>
-    <h2>А вокруг неё приборы.</h2>
-    <h2>Она – столовая посуда,</h2>
-    <h2>И нужна она повсюду.</h2>
-
+    <h1>Пара №8 Тайны загадок</h1>
+    <h2>2. Высокий, властный, низкий, робкий. <br><br> На склоне лет он может измениться, от страха мы можем потерять его.</h2>
     <form id="numberForm">
-        <input type="text" id="numberInput" name="number" placeholder="Угадайте слово">
+        <input type="text" id="numberInput" name="number" placeholder="Введите ответ">
         <button type="submit">Отправить</button>
     </form>
     <script>
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'тарелка') {
-                window.location.href = 'index30.html';
+            if (number === 'голос') {
+                window.location.href = 'index35.html';
             } else {
                 alert('Нет. Попробуйте еще раз.');
             }
