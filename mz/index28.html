@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отсканируй QR код</title>
+</head>
+<body>
+    <h1>Семинар № 5 Лингвистика</h1>
+    <form id="numberForm">
+        <input type="text" id="numberInput" name="number" placeholder="Введите слово">
+        <button type="submit">Отправить</button>
+    </form>
+    <script>
+        document.getElementById('numberForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const number = document.getElementById('numberInput').value;
+            if (number === 'дружба') {
+                window.location.href = 'index29.html';
+            } else {
+                alert('Неверная цифра. Попробуйте еще раз.');
+            }
+        });
+    </script>
+</body>
+</html>
