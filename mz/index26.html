@@ -1,1 +1,30 @@
-index26.html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 Оптика</title>
+</head>
+<body>
+    <h1>Введите термин взаимного усиления / ослабления / наложения волн в оптике</h1>
+    <h2>Воспользуйтесь фонариком и зеркалом</h2>
+
+    <img src="Finde.jpg">
+
+    <form id="numberForm">
+        <input type="text" id="numberInput" name="number" placeholder="Введите термин">
+        <button type="submit">Отправить</button>
+    </form>
+    <script>
+        document.getElementById('numberForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const number = document.getElementById('numberInput').value;
+            if (number === 'интерференция') {
+                window.location.href = 'index27.html';
+            } else {
+                alert('Нет. Попробуйте еще раз.');
+            }
+        });
+    </script>
+</body>
+</html>
