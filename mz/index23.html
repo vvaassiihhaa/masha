@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23. Задание в календаре</title>
+</head>
+<body>
+    <h1>Задание в календаре</h1>
+    <h2><p>Используя приложение 1 и 2 разгадайте метафору и посчитайте количество букв в ответе</p></h2>
+    <h1>Пн2, Чт1, Вс3, Ср2, Чт1, Чт3, Чт3, Чт5, Вт1, Вс1, Вс3, Чт1, Пт1, Вт2, Сб2</h1>
+    <form id="numberForm">
+        <input type="text" id="numberInput" name="number" placeholder="Ответ">
+        <button type="submit">Отправить</button>
+    </form>
+    <script>
+        document.getElementById('numberForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const number = document.getElementById('numberInput').value;
+            if (number === '8') {
+                window.location.href = 'index25.html';
+            } else {
+                alert('Нет. Попробуйте еще раз.');
+            }
+        });
+    </script>
+    <br>
+    <img src="p24.png">
+    <br>
+    <img src="p23.png">
+</body>
+</html>
