@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 2.2</title>
     <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+
         body {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            min-height: 100vh;
+            min-height: 80vh;
             margin: 0;
             padding: 0;
         }
@@ -18,16 +26,6 @@
             font-size: 3em;
             text-align: center;
             margin-top: 20px;
-        }
-        .blinking-text {
-            text-align: center;
-            font-size: 1.5em;
-            animation: blink 1s step-start infinite;
-        }
-        @keyframes blink {
-            50% {
-                opacity: 0;
-            }
         }
         .image-container {
             text-align: center;
@@ -57,7 +55,7 @@
 <body>
 
     <h1>2.2 Почтовый индекс</h1>
-    <p class="blinking-text">Соедините точки согласно схемы на картинке</p>
+    <h1>Соедините точки согласно схемы на картинке</h1>
     <div class="image-container">
         <img src="8.png" alt="Схема">
     </div>
