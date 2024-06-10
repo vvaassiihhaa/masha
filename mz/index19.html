@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>19. Расшифруйте ответ абонента</title>
+    <title>19. Введите номер абонента</title>
     <style>
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            text-align: center;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
         }
@@ -45,11 +47,24 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Расшифруйте ответ абонента</h1>
-        <div class="button">
-            <a href="index20.html">Дальше</a>
-        </div>
-    </div>
+    <h1>19. Введите номер абонента</h1>
+    <h1>Вспомните все цифры !</h1>
+<br>
+    <form id="numberForm">
+        <input type="text" id="numberInput" name="number" placeholder="Введите номер">
+        <button type="submit">Отправить</button>
+    </form>
+    <script>
+        document.getElementById('numberForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const number = document.getElementById('numberInput').value;
+            if (number === '89060637692') {
+                window.location.href = 'index199.html';
+            } else {
+                alert('Неверно. Попробуйте еще раз.');
+            }
+        });
+    </script>
 </body>
+
 </html>

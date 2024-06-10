@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Задание абонента</title>
+<style>
+  /* Добавляем стиль для изменения фона страницы */
+
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+
+  @font-face {
+    font-family: 'Philosopher';
+    src: url('Philosopher-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .philosopher-regular {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>
+</head>
+<body>
+  <h1 class="philosopher-regular">
+  
+  <!-- Замените ссылку на картинку boy.jpeg на вашу ссылку -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VdDOuhhUb3k?si=zlL05mQkew4FcjXb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+Посмотрите видео и отвечайте на вопрос </h1>
+
+  <form id="myForm" onsubmit="event.preventDefault(); checkInput()">
+    <label for="textInput" class="philosopher-regular">Введите текст:</label>
+    <input type="text" id="textInput" name="textInput" class="philosopher-regular">
+    <button type="submit" class="philosopher-regular">Отправить</button>
+  </form>
+
+  <p id="message" class="philosopher-regular"></p>
+
+  <script>
+    function checkInput() {
+      var inputText = document.getElementById('textInput').value;
+
+      if (inputText.toLowerCase() === 'борис годунов') {
+        document.getElementById('message').innerHTML = 'Правильно ! Молодцы !!!';
+        // Создаем ссылку на другой HTML файл
+        var link = document.createElement('a');
+        link.href = 'index20.html';
+        link.textContent = 'Интересно ? Идём дальше';
+        document.body.appendChild(link);
+      } else {
+        document.getElementById('message').innerHTML = 'Попробуй ещё раз или возьми подсказку';
+      }
+    }
+  </script>
+</body>
+</html>
