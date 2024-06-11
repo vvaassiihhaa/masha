@@ -25,7 +25,7 @@
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'корень') {
+            if (number.toLowerCase() === 'корень') {
                 window.location.href = 'index36.html';
             } else {
                 alert('Нет. Попробуйте еще раз.');

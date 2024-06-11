@@ -22,16 +22,15 @@
 </head>
 <body>
     <h1>Семинар №9 Музыка</h1>
-    <h2>Введите 4-ю букву</h2>
     <form id="numberForm">
-        <input type="text" id="numberInput" name="number" placeholder="Введите 4-ю букву">
+        <input type="text" id="numberInput" name="number" placeholder="Угадайте артиста">
         <button type="submit">Отправить</button>
     </form>
     <script>
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'т') {
+            if (number.toLowerCase() === 'баста') {
                 window.location.href = 'index39.html';
             } else {
                 alert('Неверная букву. Попробуйте еще раз.');

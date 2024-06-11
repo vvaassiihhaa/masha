@@ -25,7 +25,7 @@
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'одуванчик') {
+            if (number.toLowerCase() === 'одуванчик') {
                 window.location.href = 'index342.html';
             } else {
                 window.location.href = 'index3411.html';

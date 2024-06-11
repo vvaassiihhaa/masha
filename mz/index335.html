@@ -26,7 +26,7 @@
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'сканер') {
+            if (number.toLowerCase() === 'сканер') {
                 window.location.href = 'index34.html';
             } else {
                 alert('Нет. Попробуйте еще раз.');

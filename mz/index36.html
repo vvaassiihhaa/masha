@@ -29,7 +29,7 @@
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'лень') {
+            if (number.toLowerCase() === 'лень') {
                 window.location.href = 'index37.html';
             } else {
                 alert('Нет. Попробуйте еще раз.');

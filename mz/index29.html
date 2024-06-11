@@ -29,7 +29,7 @@
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'тарелка') {
+            if (number.toLowerCase() === 'тарелка') {
                 window.location.href = 'index30.html';
             } else {
                 alert('Нет. Попробуйте еще раз.');
