@@ -31,7 +31,7 @@
   <!-- Замените ссылку на картинку jj.jpeg на вашу ссылку -->
   <img src="jj.jpeg" alt="Картинка"> <br><br>
 
-Введите 2-ю букву слова</h1>
+Введите 2-ю букву в виде цифры</h1>
 
   <form id="myForm" onsubmit="event.preventDefault(); checkInput()">
     <label for="textInput" class="philosopher-regular">Введите текст:</label>
@@ -45,7 +45,7 @@
     function checkInput() {
       var inputText = document.getElementById('textInput').value;
 
-      if (inputText.toLowerCase() === 'о') {
+      if (inputText.toLowerCase() === '0') {
         document.getElementById('message').innerHTML = 'Правильно ! Молодцы !!!';
         // Создаем ссылку на другой HTML файл
         var link = document.createElement('a');

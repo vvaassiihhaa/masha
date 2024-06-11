@@ -3,35 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2.4 Чебурашка</title>
-
-  <style>
-    /* Добавляем стиль для изменения фона страницы */
-    body {
-      text-align: center;
-      background-color: #f4f4f9;
-    }
-  </style>
-
+    <title>2.4. Сколько звуков в слове</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            font-size: 1.5em;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>2.4 Прочти цифру</h1>
-    <h2>Не заглядывая в мешок, найдите фигурку Чебурашки</h2>
-
-    <img src="2.4.PNG"><br><br>
-
-    <form id="numberForm">
-        <input type="text" id="numberInput" name="number" placeholder="Введите цифру">
+    <h1>Сколько звуков<br>в слове<br><br>СИЯЮ</h1>
+    <form id="riddleForm">
+        <input type="text" id="answer" placeholder="Твой ответ" required>
         <button type="submit">Отправить</button>
     </form>
+
     <script>
-        document.getElementById('numberForm').addEventListener('submit', function(event) {
+        document.getElementById('riddleForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            const number = document.getElementById('numberInput').value;
-            if (number === '6') {
+            const answer = document.getElementById('answer').value.trim();
+            if (answer === '6') {
                 window.location.href = 'index12.html';
             } else {
-                alert('Неверная цифра. Попробуйте еще раз.');
+                alert('Неверный ответ. Попробуй еще раз.');
             }
         });
     </script>
