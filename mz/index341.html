@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пара №8 Тайны загадок</title>
+    <title>Семинар №8 Тайны загадок</title>
 
     <style>
         body {
@@ -16,7 +16,8 @@
 </head>
 <body>
     <h1>Пара №8 Тайны загадок</h1>
-    <h2>1. Лишь став седым, дает потомство</h2>
+	<img src="p341.png">
+   
     <form id="numberForm">
         <input type="text" id="numberInput" name="number" placeholder="Введите ответ">
         <button type="submit">Отправить</button>
@@ -25,10 +26,10 @@
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'одуванчик') {
+            if (number === 'дыхание') {
                 window.location.href = 'index342.html';
             } else {
-                alert('Нет. Попробуйте еще раз.');
+                alert('Нет. это совокупность физиологических процессов, конечной целью которых является доставка и потребление O2.Попробуйте еще раз.');
             }
         });
     </script>

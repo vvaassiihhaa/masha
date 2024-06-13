@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Отсканируй QR код</title>
+    <title>Семинар №5</title>
 
     <style>
         body {
@@ -15,25 +15,31 @@
 
 </head>
 <body>
-    <h1>Семинар № 5 Лингвистика</h1>
-
-    <h2>Отсканируй QR код</h2>
-
-
-    <img src="qr.png">
+    <h1>Семинар №5 Лингвистика</h1>
+	
+	<h2>Найдите подсказку в Lounge зоне:</h2>
+	
+	 <img src="28.png">
+	
+    <h2>Из стекла или фарфора,</h2>
+    <h2>А вокруг неё приборы.</h2>
+    <h2>Она – столовая посуда,</h2>
+    <h2>И нужна она повсюду.</h2>
+	
+	
 
     <form id="numberForm">
-        <input type="text" id="numberInput" name="number" placeholder="Введите слово">
+        <input type="text" id="numberInput" name="number" placeholder="Угадайте слово">
         <button type="submit">Отправить</button>
     </form>
     <script>
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'дружба') {
+            if (number === 'тарелка') {
                 window.location.href = 'index29.html';
             } else {
-                alert('Неверная цифра. Попробуйте еще раз.');
+                alert('Нет. Попробуйте еще раз.');
             }
         });
     </script>

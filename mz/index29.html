@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Коллоквиум №5</title>
+    <title>Отсканируй QR код</title>
 
     <style>
         body {
@@ -15,24 +15,27 @@
 
 </head>
 <body>
-    <h1>Коллоквиум №5</h1>
-    <h2>Из стекла или фарфора,</h2>
-    <h2>А вокруг неё приборы.</h2>
-    <h2>Она – столовая посуда,</h2>
-    <h2>И нужна она повсюду.</h2>
+    <h1>Отсканируй QR код</h1>
+
+    <h2>Угадайте зашифрованное слово</h2>
+	
+	
+
+
+   
 
     <form id="numberForm">
-        <input type="text" id="numberInput" name="number" placeholder="Угадайте слово">
+        <input type="text" id="numberInput" name="number" placeholder="Введите слово">
         <button type="submit">Отправить</button>
     </form>
     <script>
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'тарелка') {
+            if (number === 'дружба') {
                 window.location.href = 'index30.html';
             } else {
-                alert('Нет. Попробуйте еще раз.');
+                alert('Это Акростих. Попробуйте еще раз.');
             }
         });
     </script>
