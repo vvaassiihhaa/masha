@@ -3,75 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2.4. Сколько звуков в слове</title>
+    <title>Задание 2.4</title>
     <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            height: 40vh;
+            min-height: 80vh;
             margin: 0;
-            background-color: #f0f0f0;
-            font-family: 'Arial', sans-serif;
+            padding: 0;
         }
         h1 {
             font-size: 3em;
             text-align: center;
-            font-family: 'Georgia', serif;
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
-        input[type="text"] {
-            font-size: 1.5em;
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            transform: scale(1.5);
+        }
+
+        #input-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        input {
+            font-size: 24px;
+            font-weight: bold;
             padding: 10px;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        button {
-            font-size: 1.5em;
-            padding: 10px 20px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #0056b3;
+            width: 50%;
+            max-width: 400px;
         }
     </style>
 </head>
 <body>
+
 <<<<<<< HEAD
-    <h1>2.4 Прочти цифру</h1>
-    <h2>Не заглядывая в мешок, найдите фигурку Чебурашки</h2>
-
-    <img src="2.4.PNG"><br><br>
+    
+    <h1>2.4.Угадайте цифру</h1>
 	
-	
+      <br>
+ <div class="image-container">
+        <img src="2.44.png" alt="Схема">
 
-    <form id="numberForm">
-        <input type="text" id="numberInput" name="number" placeholder="Введите цифру">
-=======
-    <h1>Сколько звуков<br>в слове<br><br>СИЯЮ</h1>
-    <form id="riddleForm">
-        <input type="text" id="answer" placeholder="Твой ответ" required>
->>>>>>> 0f0e88e848c3de4fe3ef1a4e1f28af410c07d243
-        <button type="submit">Отправить</button>
-    </form>
+    </div>
+
+    <div id="input-container">
+        <input type="text" id="input-number" placeholder="Введите цифру">
+    </div>
 
     <script>
-        document.getElementById('riddleForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const answer = document.getElementById('answer').value.trim();
-            if (answer === '6') {
-                window.location.href = 'index12.html';
-            } else {
-                alert('Неверный ответ. Попробуй еще раз.');
+        document.getElementById('input-number').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const inputValue = event.target.value;
+                if (inputValue == '6') {
+                    window.location.href = 'index12.html';
+                } else {
+                    alert('Нет. Не сдавайся !');
+                }
             }
         });
     </script>
+
 </body>
 </html>
