@@ -29,7 +29,7 @@
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'голос') {
+            if (number.toLowerCase() === 'голос') {
                 window.location.href = 'index35.html';
             } else {
                 alert('Нет. Попробуйте еще раз.');

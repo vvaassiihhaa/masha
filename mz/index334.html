@@ -26,7 +26,7 @@
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'принтер') {
+            if (number.toLowerCase() === 'принтер') {
                 window.location.href = 'index335.html';
             } else {
                 alert('Нет. Ищите слово в начале предложения. Попробуйте еще раз.');

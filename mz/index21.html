@@ -29,7 +29,7 @@
         document.getElementById('numberForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const number = document.getElementById('numberInput').value;
-            if (number === 'холодильник') {
+            if (number.toLowerCase() === 'холодильник') {
                 window.location.href = 'index22.html';
             } else {
                 alert( 'Первая буква - х' );
