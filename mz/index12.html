@@ -48,21 +48,23 @@
         исполняет песню <br>
 				Человек и кошка?<br>
 		
-
-
         
 </h1>
-    <form id="riddleForm">
-        <input type="text" id="answer" placeholder="Введите цифру" required>
-        <button type="submit">Отправить</button>
 
-    </form>
+<div class="image-container">
+        <img src="12.jpeg" alt="Схема">
+
+    </div>
+	
+     <div id="input-container">
+        <input type="text" id="input-number" placeholder="Введите цифру">
+    </div>
 
     <script>
-        document.getElementById('riddleForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const answer = document.getElementById('answer').value.trim();
-            if (answer === '0') {
+        document.getElementById('input-number').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const inputValue = event.target.value;
+                if (inputValue == '0') {
                 window.location.href = 'index13.html';
             } else {
                 alert('Неверный ответ. Гугл в помощь.');
@@ -74,4 +76,4 @@
 </body>
 </html>
 
-    <img src="nol.jpeg">
+   
